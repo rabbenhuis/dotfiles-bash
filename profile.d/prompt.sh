@@ -116,6 +116,8 @@ case ${TERM} in
 		PS1=${PS1}"\[${SU}\]\u\[${COLOR_RESET}\]@\[${CNX}\]\h\[${COLOR_RESET}\] "
 		# PWD (with disk space info)
 		PS1=${PS1}"\[\$(disk_color)\]\w\[${COLOR_RESET}\]] "
+		# git info (needs bash-completion)
+		PS1=${PS1}'$(__git_ps1 "\[${AF_COLOR_GREEN}\](%s)\[${COLOR_RESET}\] ")'
 		# Prompt (with 'job' info)
 		PS1=${PS1}"\[\$(job_color)\]$\[${COLOR_RESET}\] "
 		# Set title of the current xterm
